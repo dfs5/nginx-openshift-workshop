@@ -1,30 +1,42 @@
 apiVersion: k8s.nginx.org/v1alpha1
 kind: NginxIngressController
 metadata:
-  name: nginx-ingress-controller
+  name: my-nginx-ingress-controller
   namespace: nginx-ingress
 spec:
-  type: deployment
-  image:
-    repository: {nginx-plus-image}
-    tag: {nginx-plus-image}
-    pullPolicy: Always
-  serviceType: NodePort
-  enableCRDs: true
-  nginxPlus: true
-  ingressClass: nginx-ingress
-  enableTLSPassthrough: true
-  replicas: 1
-  healthStatus:
-    enable: true
-    uri: "/my-health"
-  nginxDebug: true
   logLevel: 3
+  wildcardTLS: ''
+  enableCRDs: true
+  ingressClass: nginx
+  enableLeaderElection: false
+  enableLatencyMetrics: false
   nginxStatus:
+    allowCidrs: 127.0.0.1
     enable: true
     port: 9090
-  prometheus:
+  watchNamespace: ''
+  nginxReloadTimeout: 0
+  healthStatus:
     enable: true
-    port: 9114
+    uri: ''
   appProtect:
-    enable: true
+    enable: false
+  serviceType: NodePort
+  defaultSecret: ''
+  globalConfiguration: ''
+  nginxPlus: true
+  enablePreviewPolicies: false
+  service: null
+  useIngressClassOnly: true
+  enableSnippets: false
+  nginxDebug: false
+  type: deployment
+  image:
+    pullPolicy: Always
+    repository: >-
+      image-registry.openshift-image-registry.svc:5000/nginx-ingress/openshift-image-plus
+    tag: 1.11.1
+  replicas: null
+  enableTLSPassthrough: true
+status:
+  deployed: true
