@@ -2,6 +2,7 @@ apiVersion: k8s.nginx.org/v1alpha1
 kind: Policy
 metadata:
   name: rate-limit-policy
+  namespace: cafe
 spec:
   rateLimit:
     rate: 1r/s
