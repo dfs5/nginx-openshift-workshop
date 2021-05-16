@@ -19,7 +19,7 @@ spec:
     action:
       pass: tea
   - path: /coffee
-#    policies:
-#    - name: rate-limit-policy
+    policies:
+    - name: rate-limit-policy
     action:
       pass: coffee
