@@ -8,13 +8,13 @@ spec:
     log_as3_response: true
     manage_routes: true
     agent: as3
-    log_level: DEBUG
+    log_level: debug
     route_vserver_addr: 10.24.1.29
     bigip_partition: ocp
 #    openshift_sdn_name: /BIGIP_PARTITION/SDN_NAME
     bigip_url: 10.1.1.2
     insecure: true
-    pool-member-type: NODEPORT
+    pool-member-type: nodeport
   bigip_login_secret: bigip-login
   image:
     pullPolicy: Always
