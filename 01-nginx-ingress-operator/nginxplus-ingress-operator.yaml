@@ -34,7 +34,7 @@ spec:
   image:
     pullPolicy: Always
     repository: >-
-      image-registry.openshift-image-registry.svc:5000/nginx-ingress/openshift-image-plus
+      image-registry.openshift-image-registry.svc:5000/nginx-ingress/openshift-image-plus-nap
     tag: 1.11.1
   replicas: null
   enableTLSPassthrough: true
