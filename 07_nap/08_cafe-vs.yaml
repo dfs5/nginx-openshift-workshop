@@ -5,6 +5,8 @@ metadata:
   namespace: cafe
 spec:
   host: cafe.example.com
+#  policies:
+#  - name: waf-policy
   tls:
     secret: cafe-secret
   upstreams:
@@ -21,7 +23,7 @@ spec:
         upstream: tea
   - path: /coffee
     policies:
-      - name: waf-policy
+    - name: waf-policy
     action:
       proxy:
         upstream: coffee
