@@ -10,4 +10,4 @@ spec:
     securityLog:
       enable: true
       apLogConf: "default/logconf"
-      logDest: "syslog:server=10.217.5.192:514"
+      logDest: "syslog:server=127.0.0.1:514"
