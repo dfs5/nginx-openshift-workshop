@@ -6,4 +6,4 @@ These manifests are based on NGINX Ingress Controller 1.10
 
 Please refer to NGINX official repo for comprehensive list of examples:
 
-https://github.com/nginxinc/kubernetes-ingress 
+https://github.com/nginxinc/kubernetes-ingress/tree/v1.11.1/examples-of-custom-resources
