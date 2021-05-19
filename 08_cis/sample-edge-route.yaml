@@ -1,0 +1,64 @@
+apiVersion: v1
+kind: Route
+metadata:
+  labels:
+    name: my-nginx-ingress-controller
+    f5type: systest
+  name: svc1-route-edge
+spec:
+  host: cafe.example.com
+  path: "/tea"
+  port:
+    targetPort: 443
+  tls:
+    certificate: |
+      -----BEGIN CERTIFICATE-----
+      MIICsjCCAZoCCQDD64a1ke0GszANBgkqhkiG9w0BAQsFADAbMRkwFwYDVQQDDBBj
+      YWZlLmV4YW1wbGUuY29tMB4XDTIxMDUxNjE0MzExNloXDTIyMDUxNjE0MzExNlow
+      GzEZMBcGA1UEAwwQY2FmZS5leGFtcGxlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQAD
+      ggEPADCCAQoCggEBAL3VN3jGJLJgW6ocDeXj5vv+AjYCVSzPSJU338J950hjXGVY
+      RhVeD0b0iXhRcGe0pXt5xwI8yf48brcMKieRfZ5HJe6op7M20K/AZqeM2P99qy4x
+      Y+tGbjqFFE2pFn5njlyfVbzs74/JOQ4sk2U2DzYpiaHE0xrUqBQEgpEY4mkyKScL
+      i451BNQX/mq/f+ZgQkZ+KuD+oa0/XgrztzybEZT37lqSUVWkYjQIFkgh2DJndg6H
+      vA96VamY7YXP3jJQMz+IeV41zIwDrAJNMkgcHzMNjVfqG4AozhMVPLNHKrUtq9v4
+      kcUlEH1kDblpdu6+vVqqsFj+qXiBMZ29c8IqNu0CAwEAATANBgkqhkiG9w0BAQsF
+      AAOCAQEAAr5XrLG5/3uzWgpW4IAYDWkqXevHWyKxIG3h0fhRK6QRLF7wnFUjevnH
+      2rryqMwwtkS95DObxP+Og/TXvg4UemIVPqRgiEqQevzWk74G29F6TrbDNvay6uU2
+      O6JxxAOBLzOAG3kmDu77dl4xydNtBMVbFwDjyUxOpLPzXcdGHaW29K7Y/AJytP3w
+      D7Y1MpmkcqHsA7f+A4nPCB4tqCdHI8IksDk5DZlBT3zrynNbrtjfEljoioDpbhM1
+      3ORlmLA/N7rdULVzP9PdX42aYyL6z0U2WivYWeCPLny7201O6cN3LlHhe8Ui0OFr
+      h8o8Wlt9ldnibvZIFFrcX8QswscQxw==
+      -----END CERTIFICATE-----
+    key: |
+      -----BEGIN RSA PRIVATE KEY-----
+      MIIEpAIBAAKCAQEAvdU3eMYksmBbqhwN5ePm+/4CNgJVLM9IlTffwn3nSGNcZVhG
+      FV4PRvSJeFFwZ7Sle3nHAjzJ/jxutwwqJ5F9nkcl7qinszbQr8Bmp4zY/32rLjFj
+      60ZuOoUUTakWfmeOXJ9VvOzvj8k5DiyTZTYPNimJocTTGtSoFASCkRjiaTIpJwuL
+      jnUE1Bf+ar9/5mBCRn4q4P6hrT9eCvO3PJsRlPfuWpJRVaRiNAgWSCHYMmd2Doe8
+      D3pVqZjthc/eMlAzP4h5XjXMjAOsAk0ySBwfMw2NV+obgCjOExU8s0cqtS2r2/iR
+      xSUQfWQNuWl27r69WqqwWP6peIExnb1zwio27QIDAQABAoIBAQCI46cTvXaa9qdD
+      HOXcwCJB1uKLRdVb8cG6cMc3fgj5B0WKg0ROhjxoA1DaZYe0EO1ABAnBEErsvXFt
+      KCWB0QWPzGiLGC2OK1oDUq/z5LpaSqnVLqKJ94jnRC3m7qac0lozamauTQFXY1h0
+      YyqK0pfXi86Gy+MbNvxZKwNoVFR4XAiZd625k53uWSgzsu67x1infIfM2U/HUIsX
+      mV3cuegqR0Hns/DEJnZYttGPbL4k4x3rjXAXSwqQN9yMoBJwoNJ9uyTeGScoMBtr
+      WVucJID0eabLcuXnFdLwmV+yKI173zZs+T7GX2WU08mM5TolRavoIlCgWEyQrYWv
+      sbRC/ShhAoGBAOCJrnP7UAG3UGpgNUr4W6+ks9aBF0eoj89zTe8fiZnktUas3pN2
+      4TdgCZdSZoXlKWIYY3/cPPNeEBGSiLkcw1WgxyqHDO5uzXMDnDx28udjl1h1vbPI
+      yUdwZl+8PbPdD5E/9RLSNDX/JwVge6R2vHNs1fckq5Rv5PnobIoZFhwFAoGBANhu
+      pXNlcJphkxGYoD2X0UALxEb8vYNYpvw0KEHobW/uMK43jb6eAb8o4eMzCgmin4ez
+      tiHLP+5DLepGiH6jkhTi6GeCCvm49XAdiV+R0IJm6qXlnWlsOEIdNSBSbNRVS1bf
+      QC71dtY2ZvJtOj/xWu5QJcSSLdzcIvOdrgUHUgvJAoGAQZb2ZtranCW4T9qatrOl
+      1MD/54D+E+ihWbAM6/UCdPniGisVOW5Yi5x6MMHZQPOYCxekuQzUoSKw/vEXDzvf
+      s3ursjiRBnVHfnlngiIdAoqNA0IhkArvAPdMcFrEi23fxkYwiLbumXdXJrLwazJk
+      CjOYrQEBPfMRqA7E5fI+CyECgYEAv37WwQ1l3hKrT4xda2HicOp4Vd7Vx1svFEMJ
+      w5blDX4QcHUS4y9mmD6R7raAERpkUGs/oRL2k9e4zmpt5q7PV8+UldDH6UAvWW2o
+      2Hhpppds0jAhYN+xvz2cfeawCAcXy9toLKRe6xXjbGgce+sO64DaidxU2++itS40
+      hJp/i5ECgYAn3/UbvwoTAGNs0lMib5E/MghQ6rIw7kkc6yb5h8kzcYNw1eK6y0IX
+      P4rjO7yN1N6FRU+Owa6aa/OcOkn/f7OZjlMpHfyDUPETuRLwV/7+PNdrl0ktPExE
+      W/x66PeEQMOrwmBXiZc98lIas8rEm2V8JwD2ItFl5AO0TjXu8eL4Yg==
+      -----END RSA PRIVATE KEY-----
+    termination: edge
+    insecureEdgeTerminationPolicy: Allow
+  to:
+    kind: Service
+    name: my-nginx-ingress-controller
