@@ -4,7 +4,8 @@ metadata:
   labels:
     name: my-nginx-ingress-controller
     f5type: systest
-  name: svc1-route-edge
+  name: bigip-route-edge
+  namespace: nginx-ingress
 spec:
   host: cafe.example.com
   path: "/tea"
